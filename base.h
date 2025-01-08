@@ -20,7 +20,7 @@ public:
 
 	void set_value_2(T2 value_2_p)noexcept { value_1 = value_2_p; }
 
-	void print()const noexcept { cout << value_1 << value_2; }
+	virtual void print()const noexcept { cout << value_1 << value_2; }
 
 	~base(){}
 };

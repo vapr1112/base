@@ -1,9 +1,9 @@
 #pragma once
 #include "base.h"
 template <class T, class T2, class T3, class T4> class child :
-    protected base<T, T2>
+    public  base<T, T2>
 {
-private:
+protected:
 	T3 value_3;
 	T4 value_4;
 
@@ -19,7 +19,7 @@ public:
 
 	void set_value_4(T4 value_4_p)noexcept { value_4 = value_4_p; }
 
-	void print1()const noexcept { cout << value_1 << value_2 << value_3 << value_4; }
+	virtual void print()const noexcept { cout << this->value_1 << this->value_2 << value_3 << value_4; }
 
 	~child(){}
 };
